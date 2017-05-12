@@ -1,27 +1,31 @@
-package com.wasiluk.medbilling.services;
+package com.wasiluk.medbilling.treatment;
 
 import java.math.BigDecimal;
 
 /**
- * Created by marcin on 05-May-17.
+ * Created by marcin on 13-May-17.
  */
-public class MedicalItem {
-    private String name;
+public class Treatment {
+
+    private TreatmentEnum name;
 
     private int quantity;
 
     private BigDecimal price;
 
-    public MedicalItem(String name, BigDecimal price) {
-        setName(name);
-        setPrice(price);
+    public Treatment(TreatmentEnum name, BigDecimal price) {
+        this.name = name;
+        this.price = price;
     }
 
-    public String getName() {
+    public Treatment() {
+    }
+
+    public TreatmentEnum getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(TreatmentEnum name) {
         this.name = name;
     }
 
